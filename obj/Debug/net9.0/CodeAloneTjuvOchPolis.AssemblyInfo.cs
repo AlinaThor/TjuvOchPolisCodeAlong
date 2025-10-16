@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CodeAloneTjuvOchPolis")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1177e66425dabae9dc643319de19eed125c0dcd2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7d9d27fd50b3c4cec565c8bd6ffde8ea0b54148")]
 [assembly: System.Reflection.AssemblyProductAttribute("CodeAloneTjuvOchPolis")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CodeAloneTjuvOchPolis")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

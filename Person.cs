@@ -51,13 +51,13 @@ namespace CodeAloneTjuvOchPolis
 
 
             //Har karaktären kommit för högt upp?
-            if (PositionY < 1)
+            if (PositionY > 25)
             {
-                PositionY = 25;
+                PositionY = 1;
             }
 
             //Har karaktären kommit för långt till höger?
-            if (PositionX < 100)
+            if (PositionX > 100)
             {
                 PositionX = 1;
             }
