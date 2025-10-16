@@ -4,11 +4,28 @@
     {
         static List<Person> persons = new List<Person>()
         {
-            new Person(), new Person(), new Person(), new Person(),
+            new Person(), new Person(), new Person(){PositionX = 5, PositionY = 5}, new Person(){PositionX = 5, PositionY = 5},
         };
+
+        static List<Person> thiefs = new List<Person>()
+        {
+            new Person(), new Person(), new Person(){PositionX = 5, PositionY = 5}, new Person(){PositionX = 5, PositionY = 5},
+        };
+
+        static List<Person> cops = new List<Person>()
+        {
+            new Person(), new Person(), new Person(){PositionX = 5, PositionY = 5}, new Person(){PositionX = 5, PositionY = 5},
+        };
+
+        static List<string> events = new List<string>();
         static void Main(string[] args)
         {
             RenderGameBoard();
+
+            foreach(string eventText in  events)
+            {
+                Console.WriteLine(eventText);
+            }
 
            
 
@@ -34,19 +51,89 @@
                     }
                     else
                     {
+
                         if (x == 0 || x == 102)
                         {
                             Console.Write("X");
                         }
                         else
                         {
+                            int foundCharacters = 0;
+                            bool foundOnePerson =  false;
+                            bool foundOneTheif = false;
+                            bool foundOneCop = false;
                             foreach(Person p in persons)
                             {
                                 if (p.PositionX == x && p.PositionY == y)
                                 {
-                                    Console.ForegroundColor = ConsoleColor.DarkGreen;
-                                    Console.Write("C");
+                                    foundOnePerson = true;
+                                    foundCharacters++;
+                                    
+                                    //Console.Write(" ");
                                 }
+                               
+                            }
+
+                            foreach (Person p in thiefs)
+                            {
+                                if (p.PositionX == x && p.PositionY == y)
+                                {
+                                    foundOneTheif = true;
+                                    foundCharacters++;
+
+                                    //Console.Write(" ");
+                                }
+
+                            }
+
+                            foreach (Person p in cops)
+                            {
+                                if (p.PositionX == x && p.PositionY == y)
+                                {
+                                    foundOneCop = true;
+                                    foundCharacters++;
+
+                                    //Console.Write(" ");
+                                }
+
+                            }
+
+                            if (foundCharacters == 0)
+                            {
+                                Console.Write(" ");
+                            }
+                            else
+                            {
+                                
+                                if (foundCharacters > 1)
+                                {
+                                    //här har vi flera karraktärer på samma plats - Explotion
+                                    Console.ForegroundColor = ConsoleColor.Yellow;
+                                    Console.Write("¤");
+                                    
+                                    events.Add($"¤ = {foundCharacters} karaktärer är på samma plats");
+                                }
+                                else
+                                {
+                                    if (foundOnePerson)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.DarkGreen;
+                                        Console.Write("C");
+                                    }
+                                    else if (foundOneTheif)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Magenta;
+                                        Console.Write("T");
+                                    }
+                                    else if(foundOneCop)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Blue;
+                                        Console.Write("P");
+                                    }
+                                    
+                                }
+                               
+                                    
                                
                             }
                            

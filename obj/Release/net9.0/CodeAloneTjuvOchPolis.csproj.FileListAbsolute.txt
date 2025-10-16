@@ -1,0 +1,15 @@
+C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\bin\Release\net9.0\CodeAloneTjuvOchPolis.exe
+C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\bin\Release\net9.0\CodeAloneTjuvOchPolis.deps.json
+C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\bin\Release\net9.0\CodeAloneTjuvOchPolis.runtimeconfig.json
+C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\bin\Release\net9.0\CodeAloneTjuvOchPolis.dll
+C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\bin\Release\net9.0\CodeAloneTjuvOchPolis.pdb
+C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\obj\Release\net9.0\CodeAloneTjuvOchPolis.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\obj\Release\net9.0\CodeAloneTjuvOchPolis.AssemblyInfoInputs.cache
+C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\obj\Release\net9.0\CodeAloneTjuvOchPolis.AssemblyInfo.cs
+C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\obj\Release\net9.0\CodeAloneTjuvOchPolis.csproj.CoreCompileInputs.cache
+C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\obj\Release\net9.0\CodeAloneTjuvOchPolis.sourcelink.json
+C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\obj\Release\net9.0\CodeAloneTjuvOchPolis.dll
+C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\obj\Release\net9.0\refint\CodeAloneTjuvOchPolis.dll
+C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\obj\Release\net9.0\CodeAloneTjuvOchPolis.pdb
+C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\obj\Release\net9.0\CodeAloneTjuvOchPolis.genruntimeconfig.cache
+C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\obj\Release\net9.0\ref\CodeAloneTjuvOchPolis.dll

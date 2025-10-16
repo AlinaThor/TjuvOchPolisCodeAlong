@@ -12,3 +12,4 @@ C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\obj\Debug\net9.
 C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\obj\Debug\net9.0\CodeAloneTjuvOchPolis.pdb
 C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\obj\Debug\net9.0\CodeAloneTjuvOchPolis.genruntimeconfig.cache
 C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\obj\Debug\net9.0\ref\CodeAloneTjuvOchPolis.dll
+C:\Users\alini\Documents\Programmering\Kod\CodeAloneTjuvOchPolis\obj\Debug\net9.0\CodeAloneTjuvOchPolis.sourcelink.json
