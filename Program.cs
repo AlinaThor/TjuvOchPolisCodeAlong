@@ -4,17 +4,17 @@
     {
         static List<Person> persons = new List<Person>()
         {
-            new Person(), new Person(), new Person(){PositionX = 5, PositionY = 5}, new Person(){PositionX = 5, PositionY = 5},
+            new Person(), //new Person(), new Person(){PositionX = 5, PositionY = 5}, new Person(){PositionX = 5, PositionY = 5},
         };
 
         static List<Person> thiefs = new List<Person>()
         {
-            new Person(), new Person(), new Person(){PositionX = 5, PositionY = 5}, new Person(){PositionX = 5, PositionY = 5},
+           // new Person(), new Person(), new Person(){PositionX = 5, PositionY = 5}, new Person(){PositionX = 5, PositionY = 5},
         };
 
         static List<Person> cops = new List<Person>()
         {
-            new Person(), new Person(), new Person(){PositionX = 5, PositionY = 5}, new Person(){PositionX = 5, PositionY = 5},
+           // new Person(), new Person(), new Person(){PositionX = 5, PositionY = 5}, new Person(){PositionX = 5, PositionY = 5},
         };
 
         static List<string> events = new List<string>();
