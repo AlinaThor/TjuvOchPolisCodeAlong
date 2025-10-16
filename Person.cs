@@ -83,16 +83,5 @@ namespace CodeAloneTjuvOchPolis
         }
     }
     // enum = namngivna heltals konstanter
-    public enum Direction
-    {
-        Up,
-        Right = 2,
-        Down = 3,
-        Left = 4,
-
-        UpAndRight = 5,
-        DownAndRight = 6,
-        DownAndLeft = 7,
-        UpAndLeft = 8,
-    }
+    
 }
