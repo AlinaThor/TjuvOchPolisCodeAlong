@@ -20,31 +20,44 @@ namespace CodeAloneTjuvOchPolis
 
         public void SetNewLocation()
         {
-            int direction = random.Next(1, 5);
-            if(direction == 1)
+            int RandomDirection = random.Next(1, 9);
+            //Här gör vi om heltalet till enum av typen direction
+            Direction direction = (Direction)RandomDirection;
+
+            switch (direction)
             {
-                //upp
-                PositionY = -1;
-            }
-            else if (direction == 2)
-            {
-                //höger
-                PositionX += 1;
-            }
-            else if (direction == 3)
-            {
-                //ner
-                PositionY += 1;
-            }
-            else if (direction == 4)
-            {
-                //vänster
-                PositionX -= 1;
-                
+                case Direction.Up:
+                    PositionY = -1;
+                    break;
+                case Direction.Right:
+                    PositionX += 1;
+                    break;
+                case Direction.Down:
+                    PositionY += 1;
+                    break;
+                case Direction.Left:
+                    PositionX -= 1;
+                    break;
+                case Direction.UpAndRight:
+                    PositionY -= 1;
+                    PositionX += 1;
+                    break;
+                case Direction.DownAndRight:
+                    PositionY += 1;
+                    PositionX += 1;
+                    break;
+                case Direction.DownAndLeft:
+                    PositionY += 1;
+                    PositionX -= 1;
+                    break;
+                case Direction.UpAndLeft:
+                    PositionY -= 1;
+                    PositionX -= 1;
+                    break;
             }
 
             //Har karaktären kommit för högt upp?
-            if(PositionY < 1)
+            if (PositionY < 1)
             {
                 PositionY = 25;
             }
@@ -68,5 +81,18 @@ namespace CodeAloneTjuvOchPolis
                 PositionX = 100;
             }
         }
+    }
+    // enum = namngivna heltals konstanter
+    public enum Direction
+    {
+        Up,
+        Right = 2,
+        Down = 3,
+        Left = 4,
+
+        UpAndRight = 5,
+        DownAndRight = 6,
+        DownAndLeft = 7,
+        UpAndLeft = 8,
     }
 }
