@@ -20,16 +20,41 @@
         static List<string> events = new List<string>();
         static void Main(string[] args)
         {
-            RenderGameBoard();
-
-            foreach(string eventText in  events)
+            while (true)
             {
-                Console.WriteLine(eventText);
+                Console.Clear();
+                //events = new List<string>();
+                events.Clear();
+                RenderGameBoard();
+
+                foreach (string eventText in events)
+                {
+                    Console.WriteLine(eventText);
+                }
+
+                Thread.Sleep(1000);
+
+
+                //Hitta nya positioner
+                foreach (Person p in persons)
+                {
+
+                    p.SetNewLocation();
+
+                }
+
+                foreach (Person p in thiefs)
+                {
+                    p.SetNewLocation();
+
+                }
+
+                foreach (Person p in cops)
+                {
+                    p.SetNewLocation();
+
+                }
             }
-
-           
-
-
 
             Console.ReadLine();
         }
