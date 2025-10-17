@@ -2,24 +2,49 @@
 {
     internal class Program
     {
-        static List<Person> persons = new List<Person>()
-        {
-            new Person(), //new Person(), new Person(){PositionX = 5, PositionY = 5}, new Person(){PositionX = 5, PositionY = 5},
-        };
+        static List<Citizen> citizens = new List<Citizen>();
 
-        static List<Person> thiefs = new List<Person>()
-        {
-           // new Person(), new Person(), new Person(){PositionX = 5, PositionY = 5}, new Person(){PositionX = 5, PositionY = 5},
-        };
+        static List<Thief> thiefs = new List<Thief>();
 
-        static List<Person> cops = new List<Person>()
-        {
-           // new Person(), new Person(), new Person(){PositionX = 5, PositionY = 5}, new Person(){PositionX = 5, PositionY = 5},
-        };
+        static List<Cop> Cops = new List<Cop>();
+        
 
         static List<string> events = new List<string>();
         static void Main(string[] args)
         {
+            //Hur många Medborgare ska finnas i spelet
+            Console.WriteLine("Welcome to Thief and Cop");
+            Console.WriteLine("How many Citizens should there be? ");
+            var numberOfCitizens = int.Parse(Console.ReadLine());
+            // Detta stod innan om vi bara ska ha hur många karaktärer totalt - var numberOfCharacters = int.Parse(Console.ReadLine());
+            Console.WriteLine("How many Thiefs should there be? ");
+            var numberOfThiefs = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("How many cops should there be? ");
+            var numberOfCops = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < numberOfCitizens; i++)
+            {
+                citizens.Add(new Citizen());
+            }
+
+            for (int i = 0; i < numberOfThiefs; i++)
+            {
+                thiefs.Add(new Thief());
+            }
+
+            for (int i = 0; i < numberOfCops; i++)
+            {
+                Cops.Add(new Cop());
+            }
+            //Detta hör ihop med om vi bar ska ha ett val av hur många karaktärer
+            //for(var i = 0; i < numberOfCharacters; i++)
+            //{
+            //    citizens.Add(new Citizen());
+            //    thiefs.Add(new Thief());
+            //    Cops.Add(new Cop());
+            //}
+
             while (true)
             {
                 Console.Clear();
@@ -36,22 +61,26 @@
 
 
                 //Hitta nya positioner
-                foreach (Person p in persons)
+                foreach (Citizen p in citizens)
                 {
-
+                    
                     p.SetNewLocation();
 
                 }
 
-                foreach (Person p in thiefs)
+                foreach (Thief thief in thiefs)
                 {
-                    p.SetNewLocation();
+                    if (!thief.Arrested)
+                    {
+                        thief.SetNewLocation();
+                    }
+                   
 
                 }
 
-                foreach (Person p in cops)
+                foreach (Cop cop in Cops)
                 {
-                    p.SetNewLocation();
+                    cop.SetNewLocation();
 
                 }
             }
@@ -87,21 +116,20 @@
                             bool foundOnePerson =  false;
                             bool foundOneTheif = false;
                             bool foundOneCop = false;
-                            foreach(Person p in persons)
+                            foreach(var citizen in citizens)
                             {
-                                if (p.PositionX == x && p.PositionY == y)
+                                if (citizen.PositionX == x && citizen.PositionY == y)
                                 {
                                     foundOnePerson = true;
                                     foundCharacters++;
                                     
-                                    //Console.Write(" ");
                                 }
                                
                             }
 
-                            foreach (Person p in thiefs)
+                            foreach (var thief in thiefs.Where(t => ! t.Arrested))
                             {
-                                if (p.PositionX == x && p.PositionY == y)
+                                if (thief.PositionX == x && thief.PositionY == y)
                                 {
                                     foundOneTheif = true;
                                     foundCharacters++;
@@ -111,9 +139,9 @@
 
                             }
 
-                            foreach (Person p in cops)
+                            foreach (var cop in Cops)
                             {
-                                if (p.PositionX == x && p.PositionY == y)
+                                if (cop.PositionX == x && cop.PositionY == y)
                                 {
                                     foundOneCop = true;
                                     foundCharacters++;
