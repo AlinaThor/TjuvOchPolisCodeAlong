@@ -8,7 +8,7 @@ namespace CodeAloneTjuvOchPolis
 {
     internal class Cop : Person
     {
-        public List<string> LostAndFound { get; set; } //= new List<string>();
+        public List<string> LostAndFound { get; set; } //= man kan också skriva: new List<string>();
 
         public Cop()
         {

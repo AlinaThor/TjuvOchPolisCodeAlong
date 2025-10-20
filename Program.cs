@@ -1,4 +1,6 @@
-﻿namespace CodeAloneTjuvOchPolis
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace CodeAloneTjuvOchPolis
 {
     internal class Program
     {
@@ -12,38 +14,19 @@
         static List<string> events = new List<string>();
         static void Main(string[] args)
         {
-            //Hur många Medborgare ska finnas i spelet
+           //Text - välkommen till tjuv och polis
             Console.WriteLine("Welcome to Thief and Cop");
-            Console.WriteLine("How many Citizens should there be? ");
-            var numberOfCitizens = int.Parse(Console.ReadLine());
-            // Detta stod innan om vi bara ska ha hur många karaktärer totalt - var numberOfCharacters = int.Parse(Console.ReadLine());
-            Console.WriteLine("How many Thiefs should there be? ");
-            var numberOfThiefs = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("How many cops should there be? ");
-            var numberOfCops = int.Parse(Console.ReadLine());
+            
 
-            for (int i = 0; i < numberOfCitizens; i++)
+           var numberOfCharacters = int.Parse(Console.ReadLine());
+
+            for (var i = 0; i < numberOfCharacters; i++)
             {
                 citizens.Add(new Citizen());
-            }
-
-            for (int i = 0; i < numberOfThiefs; i++)
-            {
                 thiefs.Add(new Thief());
-            }
-
-            for (int i = 0; i < numberOfCops; i++)
-            {
                 Cops.Add(new Cop());
             }
-            //Detta hör ihop med om vi bar ska ha ett val av hur många karaktärer
-            //for(var i = 0; i < numberOfCharacters; i++)
-            //{
-            //    citizens.Add(new Citizen());
-            //    thiefs.Add(new Thief());
-            //    Cops.Add(new Cop());
-            //}
 
             while (true)
             {
@@ -199,7 +182,10 @@
                 Console.WriteLine();
                 
             }
+
+            
             Console.ForegroundColor = ConsoleColor.White;
         }
+
     }
 }
